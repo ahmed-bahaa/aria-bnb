@@ -168,6 +168,8 @@
 
         <script>
 
+          let attention = Prompt();
+
           // Example starter JavaScript for disabling form submissions if there are invalid fields
           (function () {
             'use strict'
@@ -190,8 +192,10 @@
           })()
 
           document.getElementById("colorButton").addEventListener("click",function(){
+
+            attention.toast();
             
-            notifyModal("DaVinci:", "<em>Hi! Excited to onbaord your service? :) </em>", "question", "Yalla!")
+            // notifyModal("DaVinci:", "<em>Hi! Excited to onbaord your service? :) </em>", "question", "Yalla!")
 
             // notify("This is my messsage", "success")
             // notify("This is my messsage", "error")
@@ -229,6 +233,22 @@
               icon: icon,
               confirmButtonText: confirmationText
             })
+          }
+
+          function Prompt(){
+            let toast = function(){
+              console.log("Clicked the button and got toast");
+            }
+
+            let success = function(){
+              console.log("Clicked the button and got SUccess");
+            }
+
+            return{
+              toast: toast,
+              success: success,
+            }
+
           }
           
         </script>
