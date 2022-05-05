@@ -1,0 +1,75 @@
+{{template "base" .}}
+
+{{define "content"}}
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <h1 class="text-center mt-4">Search for Availabilitys</h1>
+
+      <!-- 
+                    <form action="booking.html" method="get" novalidate class="needs-validation">
+
+                        <div class="row">
+                          <div class="col">
+                            <label for="start_date" class="form-label">Start Date</label>
+                            <input required type="date" class="form-control" id="start_date" name="start_date" aria-describedby="StartDateHelp">
+                            <div id="StartDateHelp" class="form-text">Enter your starting date in frm YYYY-MM-DD.</div>
+                          </div>
+
+                          <div class="col">
+                            <label for="end_date" class="form-label">Start Date</label>
+                            <input required type="date" class="form-control" id="end_date" name="end_date" aria-describedby="EndDateHelp">
+                            <div id="EndDateHelp" class="form-text">Enter your Ending date in frm YYYY-MM-DD.</div>
+                          </div>
+                        </div>
+ 
+                        <button type="submit" class="btn btn-primary">Search Availability</button>
+                    </form> -->
+
+      <div class="form-row">
+
+        <div class="col">
+
+          <div class="row" id="booking-date">
+
+            <div class="col">
+              <label for="start_date" class="form-label">Start Date</label>
+              <input required class="form-control" type="text" name="start" placeholder="Arrival">
+              <div id="StartDateHelp" class="form-text">Enter your starting date in frm YYYY-MM-DD.</div>
+            </div>
+
+            <div class="col">
+              <label for="end_date" class="form-label">Start Date</label>
+              <input required class="form-control" type="text" name="end" placeholder="Departure">
+              <div id="EndDateHelp" class="form-text">Enter your Ending date in frm YYYY-MM-DD.</div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">Search Availability</button>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+{{end}}
+
+{{ define "js" }}
+<script>
+  const elem = document.getElementById('booking-date');
+  const rangepicker = new DateRangePicker(elem, {
+    format: "yyyy-mm-dd",
+  });
+
+</script>
+{{end}}

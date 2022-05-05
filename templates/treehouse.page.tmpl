@@ -1,0 +1,93 @@
+{{template "base" .}}
+
+{{define "content"}}
+
+          <div class="container">
+
+            <div class="row"> 
+                <div class="col">
+                    <img src="/static/images/house3.jpeg" class="rounded mx-auto d-block" alt="tree house">
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center mt-4">TreeHouses, This is Trazan design</h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                        It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets 
+                        containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker 
+                        including versions of Lorem Ipsum.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col text-center">
+                    <a id="check-aval-button"  class="btn btn-primary btn-lg" href="#!">Check Availability</a>
+                </div>
+            </div>
+
+    
+          </div>
+
+{{end}}
+
+
+
+{{define "js"}}
+<script>
+    document.getElementById("check-aval-button").addEventListener("click", function () {
+
+        let html = `
+            <form id="check-availability-form" action="" method="post" novalidate class="needs-validation">
+              <div class="form-row">
+                <div class="col">
+                    <div class="row" id="reservation-dates-modal">
+                        <div class="col">
+                            <input disabled required class="form-control" type="text" name="start" id="start" placeholder="Arrival">
+                        </div>
+                        <div class="col">
+                          <input disabled required class="form-control" type="text" name="end" id="end" placeholder="Departure">
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </form>
+      `
+
+        attention.custom({ msg: html, title: "choose you dates" })
+
+
+
+        // attention.error({
+        //   msg: "Ooooops",
+        // })
+
+        // attention.toast({
+        //   msg: "Hi HI",
+        // });
+
+        // notifyModal("DaVinci:", "<em>Hi! Excited to onbaord your service? :) </em>", "question", "Yalla!")
+
+        // notify("This is my messsage", "success")
+        // notify("This is my messsage", "error")
+        // notify("This is my messsage", "warning")
+
+        // let myParag = document.getElementById("myText");
+        // if(myParag.classList.contains("redText")) {
+        //   myParag.classList.remove("redText");
+        // }else{
+        //   myParag.classList.add("redText");
+        // }
+
+    })
+
+
+
+</script>
+
+{{end}}
