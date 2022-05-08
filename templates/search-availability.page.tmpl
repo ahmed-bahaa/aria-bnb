@@ -9,9 +9,9 @@
     <div class="col-md-6">
       <h1 class="text-center mt-4">Search for Availabilitys</h1>
 
-      <!-- 
-                    <form action="booking.html" method="get" novalidate class="needs-validation">
-
+      
+                    <form action="/search-availability" method="post" novalidate class="needs-validation">
+                        <input type="hidden" name="csrf_token" value="{{.CSRFToken}}">
                         <div class="row">
                           <div class="col">
                             <label for="start_date" class="form-label">Start Date</label>
@@ -27,9 +27,9 @@
                         </div>
  
                         <button type="submit" class="btn btn-primary">Search Availability</button>
-                    </form> -->
+                    </form>
 
-      <div class="form-row">
+      <!-- <div class="form-row">
 
         <div class="col">
 
@@ -53,7 +53,7 @@
 
         <button type="submit" class="btn btn-primary">Search Availability</button>
 
-      </div>
+      </div> -->
 
     </div>
   </div>
@@ -65,11 +65,11 @@
 {{end}}
 
 {{ define "js" }}
-<script>
+<!-- <script>
   const elem = document.getElementById('booking-date');
   const rangepicker = new DateRangePicker(elem, {
     format: "yyyy-mm-dd",
   });
 
-</script>
+</script> -->
 {{end}}
