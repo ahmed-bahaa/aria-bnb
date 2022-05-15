@@ -6,9 +6,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/ahmed-bahaa/booking-app/pkg/config"
-	"github.com/ahmed-bahaa/booking-app/pkg/models"
-	"github.com/ahmed-bahaa/booking-app/pkg/render"
+	"github.com/ahmed-bahaa/booking-app/internal/config"
+	"github.com/ahmed-bahaa/booking-app/internal/models"
+	"github.com/ahmed-bahaa/booking-app/internal/render"
 )
 
 // Repo the repository used by the handlers

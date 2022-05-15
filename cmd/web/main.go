@@ -2,13 +2,14 @@ package main
 
 import (
 	"fmt"
-	"github.com/alexedwards/scs/v2"
-	"github.com/ahmed-bahaa/booking-app/pkg/config"
-	"github.com/ahmed-bahaa/booking-app/pkg/handlers"
-	"github.com/ahmed-bahaa/booking-app/pkg/render"
 	"log"
 	"net/http"
 	"time"
+
+	"github.com/ahmed-bahaa/booking-app/internal/config"
+	"github.com/ahmed-bahaa/booking-app/internal/handlers"
+	"github.com/ahmed-bahaa/booking-app/internal/render"
+	"github.com/alexedwards/scs/v2"
 )
 
 const portNumber = ":8080"
