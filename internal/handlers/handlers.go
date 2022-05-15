@@ -7,6 +7,7 @@ import (
 	"net/http"
 
 	"github.com/ahmed-bahaa/booking-app/internal/config"
+	"github.com/ahmed-bahaa/booking-app/internal/forms"
 	"github.com/ahmed-bahaa/booking-app/internal/models"
 	"github.com/ahmed-bahaa/booking-app/internal/render"
 )
@@ -99,6 +100,14 @@ func (m *Repository) AvailabilityJSON(w http.ResponseWriter, r *http.Request) {
 func (m *Repository) Contact(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, r, "contact.page.tmpl", &models.TemplateData{})
 }
+
 func (m *Repository) Reservation(w http.ResponseWriter, r *http.Request) {
+	render.RenderTemplate(w, r, "make-reservation.page.tmpl", &models.TemplateData{
+		Form: forms.New(nil),
+	})
+}
+
+// PostReservation handles the posting of a reservation form
+func (m *Repository) PostReservation(w http.ResponseWriter, r *http.Request) {
 	render.RenderTemplate(w, r, "make-reservation.page.tmpl", &models.TemplateData{})
 }
