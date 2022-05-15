@@ -5,6 +5,11 @@ import (
 	"net/url"
 )
 
+// Valid returns true if there no erros, otherwise return false
+func (f *Form) Valid() bool {
+	return len(f.Errors) == 0
+}
+
 // Form create a custom form struct, embeds a url.Values object
 type Form struct {
 	url.Values
@@ -25,5 +30,6 @@ func (f *Form) Has(field string, r *http.Request) bool {
 	if x != "" {
 		return true
 	}
+	f.Errors.Add(field, "this field cannot be blank")
 	return false
 }
