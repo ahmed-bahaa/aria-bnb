@@ -1,6 +1,6 @@
 package models
 
-import "github.com/ahmed-bahaa/aria-bnb/internal/forms"
+import "github.com/ahmed-bahaa/booking-app/internal/forms"
 
 // TemplateData holds data sent from handlers to templates
 type TemplateData struct {
